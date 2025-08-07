@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>YUVI | Landing Page</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @keyframes gradientMove {
+      0%, 100% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+    }
+
+    .animated-bg {
+      background: linear-gradient(-45deg, #1e1e1e, #2c2c54, #3e3e3e, #1a1a1a);
+      background-size: 400% 400%;
+      animation: gradientMove 15s ease infinite;
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeIn 1s ease-out forwards;
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body class="font-sans text-white animated-bg min-h-screen">
+
+  <!-- Navbar -->
+  <nav class="bg-black/30 backdrop-blur px-6 py-4 flex justify-between items-center fixed top-0 w-full z-10 shadow">
+    <h1 class="text-2xl font-bold">YUVI<span class="text-orange-400">I</span></h1>
+    <ul class="flex space-x-6 text-gray-300 text-sm">
+      <li><a href="#" class="hover:text-white transition">Home</a></li>
+      <li><a href="#features" class="hover:text-white transition">Features</a></li>
+      <li><a href="#" class="hover:text-white transition">About</a></li>
+      <li><a href="#" class="hover:text-white transition">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="flex items-center justify-center text-center h-screen px-4 fade-in pt-20">
+    <div>
+      <h2 class="text-5xl md:text-6xl font-extrabold mb-6 leading-tight drop-shadow-md">
+        Welcome to <span class="text-orange-400">My Landing Page</span>
+      </h2>
+      <p class="text-gray-300 text-lg mb-8 max-w-xl mx-auto">
+        Build beautiful layouts using just HTML and Tailwind CSS. Simple. Modern. Responsive.
+      </p>
+      <a href="#features"
+         class="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-full text-sm font-semibold shadow-lg transition duration-300">
+        🚀 Get Started
+      </a>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="py-16 px-6 bg-black/20 backdrop-blur-lg">
+    <h3 class="text-3xl font-bold text-center mb-10">🔥 Features</h3>
+    <div class="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+      <div class="bg-gray-800/60 p-6 rounded-lg hover:scale-105 transition transform duration-300 shadow-md">
+        <h4 class="text-xl font-semibold mb-2 text-orange-400">Tailwind CSS</h4>
+        <p class="text-gray-300 text-sm">Clean utility-first design with easy-to-use classes.</p>
+      </div>
+      <div class="bg-gray-800/60 p-6 rounded-lg hover:scale-105 transition transform duration-300 shadow-md">
+        <h4 class="text-xl font-semibold mb-2 text-orange-400">Responsive Design</h4>
+        <p class="text-gray-300 text-sm">Mobile-friendly layout that works on all screens.</p>
+      </div>
+      <div class="bg-gray-800/60 p-6 rounded-lg hover:scale-105 transition transform duration-300 shadow-md">
+        <h4 class="text-xl font-semibold mb-2 text-orange-400">Modern Look</h4>
+        <p class="text-gray-300 text-sm">Animated gradient and smooth scroll-based effects.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-black/30 backdrop-blur text-gray-400 text-center py-6 text-sm">
+    <p>© 2025 YUVII | All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
